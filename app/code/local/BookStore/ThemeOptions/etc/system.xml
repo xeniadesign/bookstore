@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<config>
+		<tabs>			
+			<bookstore translate="label">
+				<label>BookStore Theme</label>
+				<sort_order>000</sort_order>
+			</bookstore>		
+		</tabs>
+		<sections>
+			<bookstore translate="label">
+				<label>Theme Options</label>
+				<tab>bookstore</tab>
+				<frontend_type>text</frontend_type>
+				<sort_order>1000</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>				
+				<groups>
+					<mygroup translate="label" module="themeoptions">
+						<label>Test Group</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>01</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<fields>
+							<text_field translate="label">
+								<label>Input Text Field:</label>
+								<comment>This is a comment</comment>
+								<frontend_type>text</frontend_type>
+								<sort_order>00</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</text_field>
+							<textarea_field translate="label">
+								<label>Textarea:</label>
+								<frontend_type>textarea</frontend_type>
+								<sort_order>20</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</textarea_field>
+							<enable_disable_field translate="label">
+								<label>Dropdown enable/disable</label>
+								<frontend_type>select</frontend_type>
+								<sort_order>40</sort_order>
+								<source_model>adminhtml/system_config_source_enabledisable</source_model>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</enable_disable_field>
+							<file translate="lable comment">
+								<label>File</label>
+								<frontend_type>file</frontend_type>
+								<backend_model>adminhtml/system_config_backend_file</backend_model>
+								<upload_dir>media/bookstore</upload_dir>
+								<sort_order>70</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</file>
+							<my_select_field translate="label">
+								<label>My dropdown:</label>
+								<comment>Source model provider Magento's default Yes/No values</comment>
+								<frontend_type>select</frontend_type>
+								<sort_order>90</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<source_model>adminhtml/system_config_source_yesno</source_model>
+							</my_select_field>
+						</fields>
+					</mygroup>
+					<typography translate="label" module="themeoptions">
+						<label>Typography</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>02</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<fields>
+							<font_text translate="label">
+								<label>Text font:</label>
+								<comment>Custom source model Font</comment>
+								<frontend_type>select</frontend_type>
+								<sort_order>1</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<source_model>themeoptions/source_font</source_model>
+							</font_text>
+							<font_text_size translate="label">
+								<label>Text font size:</label>
+								<comment>Custom source model Fontsize</comment>
+								<frontend_type>select</frontend_type>
+								<sort_order>2</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<source_model>themeoptions/source_fontsize</source_model>
+							</font_text_size>
+						</fields>
+					</typography>
+					<header translate="label" module="themeoptions">
+						<label>Header settings</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>03</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<fields>
+							<telephone translate="label">
+								<label>Telephone number: </label>
+								<comment>Insert here the Phone number of your company, will be displayed in the top header</comment>
+								<validate>validate-password</validate>
+								<frontend_type>text</frontend_type>
+								<sort_order>04</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<depends>
+									<topheader_enable>1</topheader_enable>
+								</depends>
+							</telephone>
+							<topheader_enable translate="label">
+								<label>Enable Top Header</label>
+								<comment><![CDATA[<script type="text/javascript">
+													Event.observe('bookstore_header_topheader_enable', 'change', function(){
+										alert('Warning! This will hide the top bar!');
+										})
+												</script>
+										]]>
+										</comment>
+								<frontend_type>select</frontend_type>
+								<sort_order>01</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<source_model>adminhtml/system_config_source_yesno</source_model>
+							</topheader_enable>	
+							<topheader_color1 translate="label">
+								<label>Top Header Background</label>
+								<comment>Pick up color for Top Header</comment>
+								<frontend_type>text</frontend_type>
+								<validate>color</validate>
+								<sort_order>02</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+								<depends>
+									<topheader_enable>1</topheader_enable>
+								</depends>
+							</topheader_color1>
+								
+							<logo translate="label" module="themeoptions">
+								<comment></comment>
+								<label>Logo</label>
+								<frontend_type>file</frontend_type>
+								<backend_model>adminhtml/system_config_backend_file</backend_model>
+								<upload_dir>media/bookstore</upload_dir>
+								<sort_order>00</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</logo>
+								
+						</fields>
+					</header>
+							
+					<footer translate="label" module="themeoptions">
+						<label>Social settings</label>
+						<frontend_type>text</frontend_type>
+						<sort_order>04</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+						<fields>
+						</fields>
+					</footer>
+				</groups>
+			</bookstore>				
+		</sections>
+	</config>
+		

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<config>
+		<modules>
+			<BookStore_ThemeOptions>
+				<version>0.1.1</version>
+			</BookStore_ThemeOptions>
+		</modules>
+		<global>
+			<models>
+				<themeoptions>
+					<class>BookStore_ThemeOptions_Model</class>
+				</themeoptions>
+			</models>
+			<helpers>
+				<themeoptions>
+					<class>BookStore_ThemeOptions_Helper</class>
+				</themeoptions>
+			</helpers>
+		</global>
+		<adminhtml>
+			<layout>
+				<updates>
+					<themeoptions>
+							<file>bookstore_themeoptions.xml</file>
+					</themeoptions>
+				</updates>
+			</layout>
+			<acl>
+				<resources>
+					<all>
+						<title>Allow Everything</title>
+					</all>
+					<admin>
+						<children>
+							<system>
+								<children>
+									<config>
+										<children>
+											<bookstore>
+												<title>Bookstore - All</title>
+											</bookstore>
+										</children>
+									</config>
+								</children>
+							</system>
+						</children>
+					</admin>
+				</resources>
+			</acl>
+		</adminhtml>																
+	</config>
+		
